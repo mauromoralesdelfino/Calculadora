@@ -124,7 +124,7 @@ public class MyListener implements View.OnClickListener
 
             case R.id.btnPor:
                 s = t.getText().toString();
-                t.setText(s+" "+"x"+" ");
+                t.setText(s+" "+"*"+" ");
                 GrisearOperaciones();
                 break;
 
@@ -145,7 +145,7 @@ public class MyListener implements View.OnClickListener
 
             case R.id.btnComa:
                 s = t.getText().toString();
-                t.setText(s+",");
+                t.setText(s+".");
                 GrisearOperaciones();
                 break;
 
@@ -222,11 +222,18 @@ public class MyListener implements View.OnClickListener
         String operaciones = "+-*/";
         for (Integer i=0;i<operaciones.length();i++)
         {
-            operaciones.eq
+
             //if(s.equals(operaciones.charAt(i)))
-            if(s.equals(Character.toString((operaciones.charAt(i)))))
+            /*if(s.contains(Character.toString((operaciones.charAt(i)))))
             {
-                return resp;
+                //System.out.println(1);
+                System.out.println(operaciones.charAt(i));
+                int x = s.indexOf(operaciones.charAt(i));
+                System.out.println(x);
+            }*/
+            if(s.contains(Character.toString((operaciones.charAt(i)))))
+            {
+                resp = true;
             }
 
 
@@ -249,7 +256,7 @@ public class MyListener implements View.OnClickListener
             if(ultimo.equals(Character.toString((nums.charAt(i)))))
             {
 
-                return resp;
+               resp = true;
             }
 
         }
