@@ -16,6 +16,14 @@ public class MyListener implements View.OnClickListener
     private View _editT;
     private View _btn;
     private MainActivity _miAct;
+    
+    
+public MyListener( MainActivity act)//Edittext
+    {
+        this._miAct = act;
+        EditText et = (EditText) this._miAct.findViewById(R.id.eText1);
+        TextView t = (TextView) this._miAct.findViewById(R.id.txt1);
+    }
 
 
 
@@ -25,8 +33,7 @@ public class MyListener implements View.OnClickListener
     @Override
     public void onClick(View v)
     {   int color;
-        EditText et = (EditText) _miAct.findViewById(R.id.eText1);
-        TextView t = (TextView) _miAct.findViewById(R.id.txt1);
+        
         String s = "";
 
 
@@ -263,11 +270,7 @@ public class MyListener implements View.OnClickListener
         return resp;
     }
 
-    public MyListener( MainActivity act)
-    {
-        this._miAct = act;
-    }
-
+    
     public View get_btn() {
         return _btn;
     }
